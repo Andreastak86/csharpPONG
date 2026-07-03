@@ -42,3 +42,4 @@ C:\Repositories\C#undervisning\PONG\obj\Debug\net10.0\refint\C#undervisning.dll
 C:\Repositories\C#undervisning\PONG\obj\Debug\net10.0\C#undervisning.pdb
 C:\Repositories\C#undervisning\PONG\obj\Debug\net10.0\C#undervisning.genruntimeconfig.cache
 C:\Repositories\C#undervisning\PONG\obj\Debug\net10.0\ref\C#undervisning.dll
+C:\Repositories\C#undervisning\PONG\obj\Debug\net10.0\C#undervisning.sourcelink.json

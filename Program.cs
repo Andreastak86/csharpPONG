@@ -8,6 +8,10 @@ const int paddleHeight = 100;
 const int ballSize = 16;
 const float paddleSpeed = 400f;
 
+//Her legger vi til aiPaddle//
+const float aiSpeed = 215f;
+const float aiDeadZone = 18f;
+
 Raylib.InitWindow(screenWidth, screenHeight, "Pong");
 Raylib.SetTargetFPS(60);
 
@@ -27,8 +31,16 @@ while (!Raylib.WindowShouldClose())
    float dt = Raylib.GetFrameTime();
    if (Raylib.IsKeyDown(KeyboardKey.W)) leftPaddle.Y -= paddleSpeed * dt;
    if (Raylib.IsKeyDown(KeyboardKey.S)) leftPaddle.Y += paddleSpeed * dt;
-   if (Raylib.IsKeyDown(KeyboardKey.Up)) rightPaddle.Y -= paddleSpeed * dt;
-   if (Raylib.IsKeyDown(KeyboardKey.Down)) rightPaddle.Y += paddleSpeed * dt;
+   
+   float aiPaddleCenter = rightPaddle.Y + paddleHeight / 2f;
+   float aiDifference = ballPosition.Y - aiPaddleCenter;
+   if (Math.Abs(aiDifference) > aiDeadZone)
+   {
+      if (aiDifference > 0)
+      rightPaddle.Y += aiSpeed * dt;
+      else
+      rightPaddle.Y -= aiSpeed * dt;
+   }
 
 leftPaddle.Y = Math.Clamp(leftPaddle.Y, 0, screenHeight - paddleHeight);
 rightPaddle.Y = Math.Clamp(rightPaddle.Y, 0, screenHeight - paddleHeight);
