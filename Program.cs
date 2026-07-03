@@ -45,6 +45,8 @@ while (!Raylib.WindowShouldClose())
 leftPaddle.Y = Math.Clamp(leftPaddle.Y, 0, screenHeight - paddleHeight);
 rightPaddle.Y = Math.Clamp(rightPaddle.Y, 0, screenHeight - paddleHeight);
 
+//sjekk om det er her problemet ligger for å fikse at ballen ikke bare går fram og tilbake
+
 ballPosition += ballVel * dt;
 
 if (ballPosition.Y - ballSize / 2 <= 0 || ballPosition.Y + ballSize / 2 >=screenHeight )
