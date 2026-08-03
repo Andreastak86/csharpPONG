@@ -1,6 +1,8 @@
 ﻿using System.Numerics;
 using Raylib_cs;
 
+
+
 const int screenWidth = 800;
 const int screenHeight = 600;
 const int paddleWidth = 16;
