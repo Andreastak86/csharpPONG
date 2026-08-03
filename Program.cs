@@ -20,7 +20,7 @@ var ballVel = new Vector2(350, 250);
 int leftScore = 0;
 int rightScore = 0;
 var scoreColor = new Color(251, 133, 0);
-
+// kommentar
 
 while (!Raylib.WindowShouldClose())
 {
